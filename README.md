@@ -1,1 +1,1 @@
-# higher_learning
+# azad_college

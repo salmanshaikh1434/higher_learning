@@ -1,6 +1,6 @@
 /node_modules
-/public/hot
-/public/storage
+/public_html/hot
+/public_html/storage
 /storage/*.key
 /vendor
 .env
@@ -10,3 +10,17 @@ Homestead.json
 Homestead.yaml
 npm-debug.log
 yarn-error.log
+public_html/assets/images/admission/*
+public_html/assets/images/admission-detail/*
+public_html/assets/images/blog/*
+public_html/assets/images/campus/*
+public_html/assets/images/events/*
+public_html/assets/images/framework_images/*
+public_html/assets/images/gallery/*
+public_html/assets/images/research/*
+public_html/assets/img/gallery/*
+public_html/uploads/notices/*
+public_html/uploads/albums/*
+public_html/uploads/album/*
+public_html/uploads/registration/certificates/*
+public_html/uploads/registration/*

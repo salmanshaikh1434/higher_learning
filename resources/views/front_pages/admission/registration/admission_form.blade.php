@@ -2,17 +2,17 @@
 @section('content')
     <div class="about_bg">
         <div class="container">
-           <div class="row">
-             <div class="col-md-12">
-                <h1>Admissions</h1>
-             </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>Admissions</h1>
+                </div>
             </div>
         </div>
     </div>
     <div class="login sign-up" style="background:#fff;">
         <div class="container">
             <div class="col-xs-12 col-sm-12 col-md-8 well well-sm">
-                @if(responseMessages($errors))
+                @if (responseMessages($errors))
                     {{ responseMessages($errors) }}"
                 @endif
             </div>
@@ -24,7 +24,7 @@
                             <div class="form-header">
                                 <h2> Admission form for Existing Students</h2>
                             </div>
-                        
+
                             <p class="text-center text-danger">Fees
                                 is to be paid using online mode only eg. Internet banking or UPI on the account
                                 credentails
@@ -57,9 +57,7 @@
 
                         @csrf
                         <p class="text-center text-danger">Only for students continuing admission to Second and Third Year
-                            UG and PG Courses <span class="badge badge-danger"
-                            data-toggle="modal" data-target="#feesdetails">click here for Fees
-                            Details</span></p>
+                            UG and PG Courses</p>
                         <hr style="border: 2px solid #cbb58b; border-radius: 5px;">
                         <div class="row">
                             <div class="col-xs-6 col-md-6">
@@ -132,12 +130,14 @@
                                         Gender :</label><br>
                                     <div style="height:2vh;"></div>
                                     <label class="radio-inline">
-                                        <input type="radio" @if(old('sex')=='male' ) checked @endif name="sex"
-                                            id="inlineCheckbox1" value="male" required="">Male
+                                        <input type="radio" @if (old('sex') == 'male') checked
+                                        @endif name="sex"
+                                        id="inlineCheckbox1" value="male" required="">Male
                                     </label>
                                     <label class="radio-inline">
-                                        <input type="radio" @if(old('sex')=='female' ) checked @endif name="sex"
-                                            id="inlineCheckbox2" value="female" required="">male
+                                        <input type="radio" @if (old('sex') == 'female')
+                                        checked @endif name="sex"
+                                        id="inlineCheckbox2" value="female" required="">male
                                     </label>
                                 </div>
 
@@ -166,39 +166,9 @@
 
                         <div class="row">
                             <div class="col-xs-12 col-md-12">
-                                <label>course to which admission is needed <span class="badge badge-danger"
-                                        data-toggle="modal" data-target="#feesdetails">click here for Fees
-                                        Details</span></label>
+                                <label>course to which admission is needed</label>
                                 <div class="form-group">
-                                    <select class="form-control custom-select" name="course" required>
-                                        <option selected="" value="">Select</option>
-                                        <!-- ug courses -->
-                                        <option value="B.Sc biotech 2yr ">B.Sc Bio-Technology Second Year</option>
-                                        <option value="B.Sc biotech 3yr ">B.Sc Bio-Technology Third Year</option>
-                                        <option value="BBA 2yr">BBA Second Year</option>
-                                        <option value="BBA 3yr">BBA Third Year</option>
-                                        <option value="BCA 2yr">BCA Second Year</option>
-                                        <option value="BCA 3yr">BCA Third Year</option>
-                                        <option value="BCS 2yr">BCS Second Year</option>
-                                        <option value="BCS 3yr">BCS Third Year</option>
-                                        <option value="B.Com E-Commerce 2yr">B.Com E-Commerce Second Year</option>
-                                        <option value="B.Com E-Commerce 3yr">B.Com E-Commerce Third Year</option>
-                                        <!-- pg courses -->
-                                        <option value="M.Com 2yr">M.Com Seond Year</option>
-                                        <option value="M.Sc Gen. Chemistry 2 yr">M.Sc Gen. Chemistry Second Year</option>
-                                        <option value="M.Sc Analytical Chemistry 2 yr">M.Sc Analytical Chemistry Second Year
-                                        </option>
-                                        <option value="M.Sc Industrial Chemistry 2 yr">M.Sc Industrial Chemistry Second Year
-                                        </option>
-                                        <option value="M.Sc Mathematics 2 yr">M.Sc Mathematics Second Year</option>
-                                        <option value="M.Sc Microbiology 2 yr">M.Sc Microbiology Second Year</option>
-                                        <option value="M.Sc Biotechnology 2 yr">M.Sc Biotechnology Second Year</option>
-                                        <option value="M.Sc Computer Science 2 yr">M.Sc Computer Science Second Year
-                                        </option>
-                                        <option value="Mater of Personnel mgmt 2yr">Mater of Personnel Management Second
-                                            Year</option>
-                                        <!-- diploma courses drilling technology only 1yr course include in admission-->
-                                        <!-- <option vlaue="PGD in Drilling Technology">PGD in Drilling Technology</option> -->
+                                    <select class="form-control custom-select" id="select_courses" name="course" required>
                                     </select>
                                 </div>
                             </div>
@@ -424,6 +394,65 @@
 @endsection
 @section('js')
     <script>
+        var courses = [{
+                "name": "M.Sc Gen. Chemistry ",
+                "fees": 16885
+            },
+            {
+                "name": "M.Sc Analytical Chemistry ",
+                "fees": 16885
+            },
+            {
+                "name": "M.Sc Zoology",
+                "fees": 14885
+            },
+            {
+                "name": "M.Sc Botany",
+                "fees": 14885
+            },
+            {
+                "name": "M.Sc Industrial Chemistry",
+                "fees": 16885
+            },
+            {
+                "name": "M.Sc Microbiology ",
+                "fees": 26885
+            },
+            {
+                "name": "M.Sc Mathematics",
+                "fees": 6885
+            },
+            {
+                "name": "M.Sc Computer Science",
+                "fees": 32885
+            },
+            {
+                "name": "M.A Sociology",
+                "fees": 3885
+            },
+            {
+                "name": "M.A English",
+                "fees": 3885
+            },
+            {
+                "name": "M.A Urdu",
+                "fees": 3885
+            }
+        ];
+        var courseList = '<option selected="" value="">Select</option>';
+        $(document).ready(function() {
+            courses.forEach(e => {
+                courseList += '<option value="' + e.name + '">' + e.name + '</option>';
+            });
+            $("#select_courses").html(courseList)
+        });
+
+        $("#select_courses").change(function(e) {
+            e.preventDefault();
+            var selected = $(this).val();
+            feesFilter(selected);
+
+        });
         $("#frmcast").change(function() {
             if ($(this).val() == "Open") {
                 $('#castupload').hide();
@@ -457,6 +486,16 @@
             }
         });
         $("#frmcast").trigger("change");
+
+        function feesFilter(name) {
+            courses.forEach(e => {
+                if (e.name == name) {
+                    $("#amt_paid").attr('min', e.minimum);
+                    alert("You are selected " + e.name + " course. Total fees for this course:-" + e.fees);
+                    return false;
+                }
+            });
+        }
 
     </script>
 @endsection

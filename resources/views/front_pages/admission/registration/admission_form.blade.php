@@ -491,7 +491,7 @@
             courses.forEach(e => {
                 if (e.name == name) {
                     $("#amt_paid").attr('min', e.minimum);
-                    alert("You are selected " + e.name + " course. Total fees for this course:-" + e.fees);
+                    alert("You are selected " + e.name + " course. Total fees for this course:- " + e.fees);
                     return false;
                 }
             });

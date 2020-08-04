@@ -19,7 +19,7 @@
                         through the instructions before applying !!! </b> </p>
                 <div style="height:2vh"></div>
                 <p class="text-white"> For technocial difficulties, take screenshot and send your queries to <a
-                        class="alert-link" href="mailto:admission@azadcollege.in"> admission@azadcollege.in</a> <br>
+                        class="alert-link" href="mailto:trzthlr@gmail.com"> trzthlr@gmail.com</a> <br>
                     (TECHNICAL ASSISTANCE ONLY !!!) </p>
             </div>
         </div>

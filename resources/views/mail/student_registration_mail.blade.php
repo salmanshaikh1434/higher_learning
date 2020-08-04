@@ -10,8 +10,7 @@
 
 <body>
     <center>
-        <h1><b>Maulana Azad College </b></h1>
-        <small>of Arts Science and Commerce</small>
+        <h1><b>Dr. Rafiq Zakaria Institute of higher learning and advance research</b></h1>
         <h2>Thanks for Registration, We Received Your Request.</h2>
     </center>
     <table>

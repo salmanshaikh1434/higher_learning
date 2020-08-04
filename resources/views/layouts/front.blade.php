@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Welcome to Maulana Azad College of Arts Science and Commerce | Gate of Knowldge</title>
+    <title>Dr. Rafiq Zakaria Institute of higher learning and advance research</title>
 
     <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Lora:400,700" rel="stylesheet">
@@ -139,9 +139,9 @@
                                 Marg, Rauza Bagh, Aurangabad 431 001
                                 Maharashtra, India.</p>
                             <p><span>Email:</span> <a
-                                    href="mailto:macprincipal@gmail.com?subject=Contact%20from%20Website"
-                                    target="_top">macprincipal@gmail.com</a>
-                                <br> <span>Phone:</span> +91 (0240) 2381102
+                                    href="mailto:trzthlr@gmail.com?subject=Contact%20from%20Website"
+                                    target="_top">trzthlr@gmail.com</a>
+                                <br> <span>Phone:</span> +91 (0240) 2382820
                                 <!-- <br><span>FAX No:</span>(0240) 2390422 </p> -->
                         </div>
                     </div>

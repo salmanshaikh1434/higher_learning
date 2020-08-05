@@ -144,6 +144,6 @@ class Admissions extends Controller
         $mailInfo['amt_paid'] = $request->amt_paid;
         $mailInfo['mail_format'] = 'mail.student_admission_mail';
         Mail::to($request->email)->send(new RegistrationMail($mailInfo));
-        return redirect()->back()->with("message", 'registration successfully done! Registration No. ' . $registration_no . ', for more information check your mail');
+        return redirect()->back()->with("message", 'Admission successfully done! Registration No. ' . $registration_no . ', for more information check your mail');
     }
 }

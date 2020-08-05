@@ -1,7 +1,7 @@
 @extends('layouts.front')
 @section('content')
     <div class="about_bg">
-         <div class="container">
+        <div class="container">
             <div class="row">
                 <div class="col-md-12">
                     <div style="height:25vh"></div>
@@ -15,7 +15,7 @@
         <div class="login sign-up" style="background:#fff;">
             <div class="row justify-content-center">
                 <div class="col-xs-12 col-sm-12 col-md-8 well well-sm">
-                    @if(responseMessages($errors))
+                    @if (responseMessages($errors))
                         {{ responseMessages($errors) }}"
                     @endif
                 </div>
@@ -39,7 +39,7 @@
                                 Screenshot of online transaction is compulsory to attached in the form </p>
                             <table calss="text-center">
                                 <th calss="text-center">Bank Details</th>
-                                 <tr>
+                                <tr>
                                     <td>PAYEE NAME : </td>
                                     <td>DR.RAFIQ ZAKARIA CENTRE FOR HIGHER LEARNING & ADVANCED RES</td>
                                 </tr>
@@ -131,13 +131,15 @@
                                         Gender :</label><br>
                                     <div style="height:2vh;"></div>
                                     <label class="radio-inline">
-                                        <input type="radio" @if(old('sex')=='male' ) checked @endif name="sex"
-                                            id="inlineCheckbox1" value="male" required="">
+                                        <input type="radio" @if (old('sex') == 'male') checked
+                                        @endif name="sex"
+                                        id="inlineCheckbox1" value="male" required="">
                                         Male
                                     </label>
                                     <label class="radio-inline">
-                                        <input type="radio" @if(old('sex')=='female' ) checked @endif name="sex"
-                                            id="inlineCheckbox2" value="female" required="">
+                                        <input type="radio" @if (old('sex') == 'female')
+                                        checked @endif name="sex"
+                                        id="inlineCheckbox2" value="female" required="">
                                         Female
                                     </label>
                                 </div>
@@ -152,11 +154,16 @@
                                     Cast</label>
                                 <select class="form-control custom-select" id="frmcast" name="cast" required>
                                     <option selected="" value="">Select</option>
-                                    <option @if(old('cast')=='SC' ) checked @endif value="SC">SC</option>
-                                    <option @if(old('cast')=='ST' ) checked @endif value="ST">ST</option>
-                                    <option @if(old('cast')=='VJ/NT' ) checked @endif value="VJ/NT">VJ/NT</option>
-                                    <option @if(old('cast')=='OBC' ) checked @endif value="OBC">OBC</option>
-                                    <option @if(old('cast')=='Open' ) checked @endif value="Open">Open</option>
+                                    <option @if (old('cast') == 'SC') checked </beautify
+                                            end="  @endif"> value="SC">SC</option>
+                                    <option @if (old('cast') == 'ST') checked </beautify
+                                            end="  @endif"> value="ST">ST</option>
+                                    <option @if (old('cast') == 'VJ/NT') checked </beautify
+                                            end="  @endif"> value="VJ/NT">VJ/NT</option>
+                                    <option @if (old('cast') == 'OBC') checked </beautify
+                                            end="  @endif"> value="OBC">OBC</option>
+                                    <option @if (old('cast') == 'Open') checked </beautify
+                                            end="  @endif"> value="Open">Open</option>
                                 </select>
                             </div>
                             <div class="col-xl-6 col-md-6">
@@ -167,42 +174,9 @@
 
                         <div class="row">
                             <div class="col-xs-12 col-md-12">
-                                <label>course to which admission is needed <span class="badge badge-info"
-                                        data-toggle="modal" data-target="#feesdetails">click here for Fees
-                                        Details</span></label>
+                                <label>course to which admission is needed</label>
                                 <div class="form-group">
-                                    <select class="form-control custom-select" name="course" required>
-                                        <option selected="" value="">Select</option>
-                                        <option value="B.Sc biotech 3yr ">B.Sc Bio-Technology First Year</option>
-                                        <option value="BBA 3yr">BBA First Year</option>
-                                        <option value="BCA 3yr">BCA First Year</option>
-                                        <option value="BCS 3yr">BCS First Year</option>
-                                        <option value="B.Com E-Commerce 3yr">B.Com E-Commerce First Year</option>
-                                        <!-- pg courses -->
-                                        <option value="M.Com 2yr">M.Com First Year</option>
-                                        <option value="M.Sc Gen. Chemistry 2 yr">M.Sc Gen. Chemistry First Year
-                                        </option>
-                                        <option value="M.Sc Analytical Chemistry 2 yr">M.Sc Analytical Chemistry
-                                            First Year
-                                        </option>
-                                        <option value="M.Sc Industrial Chemistry 2 yr">M.Sc Industrial Chemistry
-                                            First Year
-                                        </option>
-                                        <option value="M.Sc Mathematics 2 yr">M.Sc Mathematics First Year</option>
-                                        <option value="M.Sc Microbiology 2 yr">M.Sc Microbiology First Year</option>
-                                        <option value="M.Sc Biotechnology 2 yr">M.Sc Biotechnology First Year
-                                        </option>
-                                        <option value="M.Sc Computer Science 2 yr">M.Sc Computer Science First Year
-                                        </option>
-                                        <option value="Mater of Personnel mgmt 2yr">Mater of Personnel Management
-                                            First Year
-                                        </option>
-                                        <!-- diploma courses drilling technology only 1yr course include in admission-->
-                                        <option vlaue="PGD in Drilling Technology 1yr">PGD in Drilling Technology
-                                            First Year
-                                        </option>
-
-
+                                    <select class="form-control custom-select" id="select_courses" name="course" required>
                                     </select>
                                 </div>
                             </div>
@@ -410,6 +384,65 @@
 
 @section('js')
     <script>
+        var courses = [{
+                "name": "M.Sc Gen. Chemistry ",
+                "fees": 16885
+            },
+            {
+                "name": "M.Sc Analytical Chemistry ",
+                "fees": 16885
+            },
+            {
+                "name": "M.Sc Zoology",
+                "fees": 14885
+            },
+            {
+                "name": "M.Sc Botany",
+                "fees": 14885
+            },
+            {
+                "name": "M.Sc Industrial Chemistry",
+                "fees": 16885
+            },
+            {
+                "name": "M.Sc Microbiology ",
+                "fees": 26885
+            },
+            {
+                "name": "M.Sc Mathematics",
+                "fees": 6885
+            },
+            {
+                "name": "M.Sc Computer Science",
+                "fees": 32885
+            },
+            {
+                "name": "M.A Sociology",
+                "fees": 3885
+            },
+            {
+                "name": "M.A English",
+                "fees": 3885
+            },
+            {
+                "name": "M.A Urdu",
+                "fees": 3885
+            }
+        ];
+        var courseList = '<option selected="" value="">Select</option>';
+        $(document).ready(function() {
+            courses.forEach(e => {
+                courseList += '<option value="' + e.name + '">' + e.name + '</option>';
+            });
+            $("#select_courses").html(courseList)
+        });
+
+        $("#select_courses").change(function(e) {
+            e.preventDefault();
+            var selected = $(this).val();
+            feesFilter(selected);
+
+        });
         $("#frmcast").change(function() {
             if ($(this).val() == "Open") {
                 $('#castupload').hide();
@@ -443,6 +476,16 @@
             }
         });
         $("#frmcast").trigger("change");
+
+        function feesFilter(name) {
+            courses.forEach(e => {
+                if (e.name == name) {
+                    $("#amt_paid").attr('min', e.minimum);
+                    alert("You are selected " + e.name + " course. Total fees for this course:- " + e.fees);
+                    return false;
+                }
+            });
+        }
 
     </script>
 @endsection

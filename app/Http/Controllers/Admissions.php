@@ -35,7 +35,7 @@ class Admissions extends Controller
             'lastexam' => "required",
             'percentage' => "required",
             'lastinst' => "required",
-            'txnid' => "required",
+            'txn_id' => "required",
             'txncopy' => "required",
             'txncopy' => 'mimes:png,jpeg,jpg|max:200',
             'photo' => "required",
@@ -71,7 +71,7 @@ class Admissions extends Controller
         $mailInfo['name'] = $name;
         $mailInfo['registration_no'] = $registration_no;
         $mailInfo['course'] = $request->course;
-        $mailInfo['txn_no'] = $request->txnid;
+        $mailInfo['txn_no'] = $request->txn_id;
         $mailInfo['mail_format'] = 'mail.student_registration_mail';
         Mail::to($request->email)->send(new RegistrationMail($mailInfo));
         return redirect()->back()->with("message", 'registration successfully done! Registration No. ' . $registration_no . ', for more information check your mail');
@@ -103,7 +103,7 @@ class Admissions extends Controller
             'lastexam' => "required",
             'percentage' => "required",
             'lastinst' => "required",
-            'txnid' => "required",
+            'txn_id' => "required",
             'amt_paid' => 'required',
             'txncopy' => "required",
             'txncopy' => 'mimes:png,jpeg,jpg|max:200',
@@ -140,7 +140,7 @@ class Admissions extends Controller
         $mailInfo['name'] = $name;
         $mailInfo['registration_no'] = $registration_no;
         $mailInfo['course'] = $request->course;
-        $mailInfo['txn_no'] = $request->txnid;
+        $mailInfo['txn_no'] = $request->txn_id;
         $mailInfo['amt_paid'] = $request->amt_paid;
         $mailInfo['mail_format'] = 'mail.student_admission_mail';
         Mail::to($request->email)->send(new RegistrationMail($mailInfo));

@@ -18,6 +18,7 @@ class ProvisionalRegistration extends Model
         'course',
         'lastexam',
         'percentage',
+        'txn_id',
         'lastinst',
         'attachment_last_exam',
         'attachment_cast_certificate',

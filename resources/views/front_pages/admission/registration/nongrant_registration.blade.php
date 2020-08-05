@@ -257,9 +257,9 @@
                             <div class="col-xs-12 col-md-12">
                                 <label>Transaction Number </label>
                                 <div class="form-group">
-                                    <input class="form-control" name="txnid" min="35" max="100"
+                                    <input class="form-control" name="txn_id" min="35" max="100"
                                         placeholder=" Provide Transaction number or Reference number" type="text"
-                                        required="" value="{{ old('txnid') }}">
+                                        required="" value="{{ old('txn_id') }}">
                                 </div>
                             </div>
                         </div>

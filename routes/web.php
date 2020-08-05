@@ -27,7 +27,7 @@ Route::get('/admission', 'Admissions@admission');
 Route::get('/admission/nongrant_registration', 'Admissions@NonGrantRegistration');
 Route::post('/admission/nongrant_registration', 'Admissions@saveRegistration');
 Route::get('/admission/admission_form', 'Admissions@AdmissionForm');
-Route::post('/admission/admission_form', 'Admissions@saveAdmission');
+Route::post('/admission/save_admission_form', 'Admissions@saveAdmission');
 
 
 //Backend Urls

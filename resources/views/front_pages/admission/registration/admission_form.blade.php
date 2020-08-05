@@ -18,7 +18,7 @@
             </div>
             <div class="row justify-content-center">
                 <div class="col-xs-12 col-sm-12 col-md-8 well well-sm">
-                    <form action="/admission/admission_form/" class="form sign-up-form" style="background:#DCDCDC"
+                    <form action="/admission/save_admission_form" class="form sign-up-form" style="background:#DCDCDC"
                         method="POST" enctype="multipart/form-data">
                         <div class="row justify-content-center">
                             <div class="form-header">
@@ -239,7 +239,7 @@
                             <div class="col-xs-6 col-md-6">
                                 <label>Transaction Number </label>
                                 <div class="form-group">
-                                    <input class="form-control" name="txnid" min="35" max="100"
+                                    <input class="form-control" name="txn_id" min="35" max="100"
                                         placeholder=" Provide Transaction number or Reference number" type="text"
                                         required="" value="{{ old('txn_id') }}">
                                 </div>

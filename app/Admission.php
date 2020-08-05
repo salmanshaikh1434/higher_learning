@@ -19,6 +19,7 @@ class Admission extends Model
         "lastexam",
         'amt_paid',
         "percentage",
+        'txn_id',
         "lastinst",
         "attachment_last_exam",
         "attachment_cast_certificate",

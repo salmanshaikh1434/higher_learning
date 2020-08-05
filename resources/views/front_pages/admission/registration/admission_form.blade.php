@@ -11,12 +11,12 @@
     </div>
     <div class="login sign-up" style="background:#fff;">
         <div class="container">
-            <div class="col-xs-12 col-sm-12 col-md-8 well well-sm">
-                @if (responseMessages($errors))
-                    {{ responseMessages($errors) }}"
-                @endif
-            </div>
             <div class="row justify-content-center">
+                <div class="col-xs-12 col-sm-12 col-md-8 well well-sm">
+                    @if (responseMessages($errors))
+                        {{ responseMessages($errors) }}"
+                    @endif
+                </div>
                 <div class="col-xs-12 col-sm-12 col-md-8 well well-sm">
                     <form action="/admission/save_admission_form" class="form sign-up-form" style="background:#DCDCDC"
                         method="POST" enctype="multipart/form-data">

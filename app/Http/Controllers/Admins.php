@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Admission;
 use App\Album;
 use App\Announcement;
 use App\HelperClasses\HelperClass;
@@ -28,9 +29,23 @@ class Admins extends Controller
         return view('home');
     }
 
-    public function student_list(){
+    public function provisional_list()
+    {
+        $data = [
+            'title' => "Provisional Registration List",
+            'list' => ProvisionalRegistration::all()
+        ];
+        return view('backend.student_list')->with($data);
+    }
 
-        return view('backend.student_list')->with('provisional_list',ProvisionalRegistration::all());
+    public function admission_list()
+    {
+
+        $data = [
+            'title' => "Admission List",
+            'list' => Admission::all()
+        ];
+        return view('backend.student_list')->with($data);
     }
     public function notices()
     {
@@ -174,7 +189,7 @@ class Admins extends Controller
             $q = User::where("id", Auth::user()->id)->update(['password' => Hash::make($request->password)]);
             if ($q) {
                 return redirect('/admin/change_password/')->with("message", "password Updated Successfully");
-            }else{
+            } else {
                 return redirect('/admin/change_password/')->with("message", "Something Went Wrong");
             }
         }

@@ -154,24 +154,16 @@
                                     Cast</label>
                                 <select class="form-control custom-select" id="frmcast" name="cast" required>
                                     <option selected="" value="">Select</option>
-                                    <option @if (old('cast') == 'SC') checked </beautify
-                                            end="  @endif"> value="SC">SC</option>
-                                    <option @if (old('cast') == 'ST') checked </beautify
-                                            end="  @endif"> value="ST">ST</option>
-                                    <option @if (old('cast') == 'VJ/NT') checked </beautify
-                                            end="  @endif"> value="VJ/NT">VJ/NT</option>
-                                    <option @if (old('cast') == 'OBC') checked </beautify
-                                            end="  @endif"> value="OBC">OBC</option>
-                                    <option @if (old('cast') == 'Open') checked </beautify
-                                            end="  @endif"> value="Open">Open</option>
+                                    <option @if (old('cast') == 'SC') checked @endif> value="SC">SC</option>
+                                    <option @if (old('cast') == 'ST') checked @endif> value="ST">ST</option>
+                                    <option @if (old('cast') == 'VJ/NT') checked @endif> value="VJ/NT">VJ/NT</option>
+                                    <option @if (old('cast') == 'OBC') checked @endif> value="OBC">OBC</option>
+                                    <option @if (old('cast') == 'Open') checked @endif> value="Open">Open</option>
                                 </select>
                             </div>
                             <div class="col-xl-6 col-md-6">
                             </div>
                         </div>
-
-
-
                         <div class="row">
                             <div class="col-xs-12 col-md-12">
                                 <label>course to which admission is needed</label>

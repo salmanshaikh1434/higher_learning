@@ -13,7 +13,7 @@
 
 // Route::get('/home', 'HomeController@index')->name('home');
 //Front End Urls
-Route::get('/', 'HomeController@index');
+Route::get('/', 'HomeController@index')->name('home');
 Route::get('/vision', 'HomeController@vision');
 Route::get('/history', 'HomeController@history');
 Route::get('/admission_procedure', 'HomeController@admission_procedure');
@@ -25,7 +25,7 @@ Route::get('/albums', 'HomeController@albums');
 Route::get('/album/{album_id}', 'HomeController@album');
 Route::get('/admission', 'Admissions@admission');
 Route::get('/admission/nongrant_registration', 'Admissions@NonGrantRegistration');
-Route::post('/admission/nongrant_registration', 'Admissions@saveRegistration');
+Route::post('/admission/save_nongrant_registration', 'Admissions@saveRegistration');
 Route::get('/admission/admission_form', 'Admissions@AdmissionForm');
 Route::post('/admission/save_admission_form', 'Admissions@saveAdmission');
 
@@ -34,11 +34,12 @@ Route::post('/admission/save_admission_form', 'Admissions@saveAdmission');
 Route::get("/admin", function () {
     return redirect("/login");
 });
-Route::get('/admin/dashboard', 'Admins@dashboard')->name('home');
+Route::get('/admin/dashboard', 'Admins@dashboard');
 Route::get("/admin/change_password", 'Admins@changePassword');
 Route::post("/admin/change_password", 'Admins@saveChangePassword');
 Route::get("/admin/notices", 'Admins@notices');
-Route::get("/admin/student_list", 'Admins@student_list');
+Route::get("/admin/provisional_list", 'Admins@provisional_list');
+Route::get("/admin/admission_list", 'Admins@admission_list');
 Route::post("/admin/notices/save_notice", 'Admins@saveNotice');
 Route::get("/admin/notice/delete/{id}", "Admins@deleteNotice");
 Route::get("/admin/gallery", 'Admins@gallery');
@@ -58,4 +59,9 @@ Route::get('/mail', function () {
     return view('mail.student_registration_mail');
 });
 
+
+//message route
+Route::get("/message", function () {
+    return view("message");
+});
 Auth::routes();

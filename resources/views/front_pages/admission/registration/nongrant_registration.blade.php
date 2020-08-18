@@ -22,7 +22,7 @@
             </div>
             <div class="row justify-content-center">
                 <div class="col-xs-12 col-sm-12 col-md-8 well well-sm">
-                    <form action="/admission/nongrant_registration" method="POST" class="form sign-up-form"
+                    <form action="/admission/save_nongrant_registration" method="POST" class="form sign-up-form"
                         style="background:#DCDCDC" enctype="multipart/form-data">
                         @csrf
                         <div class="row justify-content-center">
@@ -154,11 +154,11 @@
                                     Cast</label>
                                 <select class="form-control custom-select" id="frmcast" name="cast" required>
                                     <option selected="" value="">Select</option>
-                                    <option @if (old('cast') == 'SC') checked @endif> value="SC">SC</option>
-                                    <option @if (old('cast') == 'ST') checked @endif> value="ST">ST</option>
-                                    <option @if (old('cast') == 'VJ/NT') checked @endif> value="VJ/NT">VJ/NT</option>
-                                    <option @if (old('cast') == 'OBC') checked @endif> value="OBC">OBC</option>
-                                    <option @if (old('cast') == 'Open') checked @endif> value="Open">Open</option>
+                                    <option @if (old('cast') == 'SC') checked @endif value="SC">SC</option>
+                                    <option @if (old('cast') == 'ST') checked @endif value="ST">ST</option>
+                                    <option @if (old('cast') == 'VJ/NT') checked @endif value="VJ/NT">VJ/NT</option>
+                                    <option @if (old('cast') == 'OBC') checked @endif value="OBC">OBC</option>
+                                    <option @if (old('cast') == 'Open') checked @endif value="Open">Open</option>
                                 </select>
                             </div>
                             <div class="col-xl-6 col-md-6">

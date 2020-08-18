@@ -67,37 +67,43 @@
                 <div class="sidebar-brand-text mx-3">Institute of higher learning<br /></div>
             </a>
 
-            <!-- Divider -->
-            <hr class="sidebar-divider my-0">
-            <!-- Nav Item - Dashboard -->
-            <li class="nav-item">
-                <a class="nav-link" href="/admin/student_list">
-                    <i class="fas fa-fw fa-user"></i>
-                    <span>Provisional List</span></a>
-            </li>
-            <!-- <li class="nav-item">
-                <a class="nav-link" href="/admin/gallery">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Gallery</span></a>
-            </li> -->
-           <!--  <li class="nav-item">
-                <a class="nav-link" href="/admin/notices">
-                    <i class="fa fa-bell"></i>
-                    <span>Notification</span></a>
-            </li> -->
-            <li class="nav-item">
-                <a class="nav-link" href="/admin/change_password">
-                    <i class="fa fa-key"></i>
-                    <span>Chnage Password</span></a>
-            </li>
-
-            <!-- Sidebar Toggler (Sidebar) -->
-            <div class="text-center d-none d-md-inline">
-                <button class="rounded-circle border-0" id="sidebarToggle"></button>
-            </div>
-
-        </ul>
-        <!-- End of Sidebar -->
+             <!-- Divider -->
+             <hr class="sidebar-divider my-0">
+             <!-- Nav Item - Dashboard -->
+             <li class="nav-item">
+                 <a class="nav-link" href="/admin/provisional_list">
+                     <i class="fas fa-fw fa-user"></i>
+                     <span>Provisional List</span></a>
+             </li>
+             <li class="nav-item">
+                 <a class="nav-link" href="/admin/admission_list">
+                     <i class="fas fa-fw fa-user"></i>
+                     <span>Admission List</span></a>
+             </li>
+             <li class="nav-item">
+                 <a class="nav-link" href="/admin/gallery">
+                     <i class="fas fa-fw fa-tachometer-alt"></i>
+                     <span>Gallery</span></a>
+             </li>
+             <li class="nav-item">
+                 <a class="nav-link" href="/admin/notices">
+                     <i class="fa fa-bell"></i>
+                     <span>Notification</span></a>
+             </li>
+             <li class="nav-item">
+                 <a class="nav-link" href="/admin/change_password">
+                     <i class="fa fa-key"></i>
+                     <span>Chnage Password</span></a>
+             </li>
+ 
+             <!-- Sidebar Toggler (Sidebar) -->
+             <div class="text-center d-none d-md-inline">
+                 <button class="rounded-circle border-0" id="sidebarToggle"></button>
+             </div>
+ 
+         </ul>
+         <!-- End of Sidebar -->
+ 
 
         <!-- Content Wrapper -->
         <div id="content-wrapper" class="d-flex flex-column">
